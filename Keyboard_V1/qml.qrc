@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>numeric_keyboard.qml</file>
+        <file>NumericKey.qml</file>
+    </qresource>
+</RCC>
