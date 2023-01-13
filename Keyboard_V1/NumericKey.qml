@@ -3,10 +3,14 @@ import QtQuick.Layouts 6.0
 import QtQuick.Controls 2.15
 
 Item {
-
+    width: rectangle.width
+    height: rectangle.height
+    anchors.centerIn: parent
     Rectangle {
-        anchors.fill: parent
         id: rectangle
+        anchors.centerIn: parent
+        implicitWidth: gridLayout.implicitWidth
+        implicitHeight: gridLayout.implicitHeight
 
         GridLayout {
             anchors.centerIn: parent

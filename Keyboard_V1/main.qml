@@ -10,43 +10,41 @@ Window {
     title: qsTr("Hello World")
 
     Rectangle {
-//        width: window.width
-//        height: 0.2 * window.height
+        id: rectangle
+//        anchors.centerIn: parent
+        width: parent.width
+//        anchors.verticalCenter: parent.verticalCenter
 
         Label {
-//            height: 0.8 * parent.height
-            id: field_name
-//            x: 0.02 * height
-            anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("Field Name: ")
+            id: label
+            text: qsTr("Field Name:")
+
         }
 
-//        TextField {
-//            anchors.right: parent.right
-//            anchors.left: field_name.right
-////            anchors.verticalCenter: parent.verticalCenter
-//            id: textInput
-//            anchors.rightMargin: 20
-//            placeholderText: qsTr("USER ENTRY")
-//        }
+        TextField {
+            id: textField
+            anchors.left: label.right
+            anchors.right: parent.right
+            anchors.rightMargin: 20
+            anchors.leftMargin: 20
+            placeholderText: qsTr("Text Field")
+        }
 
     }
 
+        NumericKey{
+            id: numeric_key
+        }
 
+        BkspcPrevNext {
+            height: numeric_key.height
+            anchors.leftMargin: 20
+            anchors.left: numeric_key.right
+            anchors.top: numeric_key.top
+            anchors.bottom: numeric_key.bottom
+        }
 
+//        AlphaNumericKey {
 
-
-
-
-    //    numeric_keyboard{
-
-    //    }
-
-    //    NumericKey{
-
-    //    }
-
-    //    NumericKey{
-    //        anchors.centerIn: parent
-    //    }
+//        }
 }
