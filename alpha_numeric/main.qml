@@ -400,10 +400,10 @@ Window {
             Row {
                 id: row
                 width: column.width
-                spacing: 70
+                spacing: 50
 
                 RoundButton {
-                    width: 300
+                    width: 400
                     id: btn_space
                     text: "Space"
                     onClicked: {

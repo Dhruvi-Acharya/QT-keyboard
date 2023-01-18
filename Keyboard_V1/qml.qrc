@@ -4,5 +4,6 @@
         <file>NumericKey.qml</file>
         <file>BkspcPrevNext.qml</file>
         <file>AlphaNumericKey.qml</file>
+        <file>BottomIcon.qml</file>
     </qresource>
 </RCC>

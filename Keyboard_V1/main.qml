@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 6.2
+import QtQuick.Layouts 6.0
 
 Window {
     id: window
@@ -9,16 +10,14 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
+
     Rectangle {
         id: rectangle
-//        anchors.centerIn: parent
         width: parent.width
-//        anchors.verticalCenter: parent.verticalCenter
 
         Label {
             id: label
-            text: qsTr("Field Name:")
-
+            text: qsTr("Numeric Keyboard:")
         }
 
         TextField {
@@ -30,21 +29,46 @@ Window {
             placeholderText: qsTr("Text Field")
         }
 
+        Label {
+            anchors.topMargin: 20
+            anchors.top: label.bottom
+            id: label2
+            text: qsTr("Alpha Numeric Key:")
+        }
+
+        TextField {
+            anchors.topMargin: 10
+            id: textField2
+            anchors.top: textField.bottom
+            anchors.left: label2.right
+            anchors.right: parent.right
+            anchors.rightMargin: 20
+            anchors.leftMargin: 20
+            placeholderText: qsTr("Text Field")
+        }
     }
 
         NumericKey{
             id: numeric_key
+            visible: textField.activeFocus ? true : false
         }
 
         BkspcPrevNext {
-            height: numeric_key.height
+            height: alpha_numeric_key.height
             anchors.leftMargin: 20
-            anchors.left: numeric_key.right
-            anchors.top: numeric_key.top
-            anchors.bottom: numeric_key.bottom
+            anchors.left: alpha_numeric_key.right
+            anchors.top: alpha_numeric_key.top
+            anchors.bottom: alpha_numeric_key.bottom
         }
 
-//        AlphaNumericKey {
+        AlphaNumericKey {
+            visible: textField2.activeFocus ? true : false
+            id: alpha_numeric_key
+        }
 
-//        }
+        BottomIcon {
+            anchors.bottom: parent.bottom
+            width: parent.width
+            anchors.bottomMargin: 50
+        }
 }
