@@ -1,6 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
-import QtQuick.Controls 6.2
+import QtQuick.Controls 2.3
 import QtQuick.Layouts 6.0
 
 Window {

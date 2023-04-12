@@ -18,8 +18,12 @@ Item {
             columns: 3
 
             RoundButton {
-                id: roundButton
+                id: btn_one
                 text: "1"
+
+                onClicked: {
+                    textField.text = textField.text + btn_one.text
+                }
             }
 
             RoundButton {

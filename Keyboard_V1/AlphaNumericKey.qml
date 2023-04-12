@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Layouts 6.0
 import QtQuick.Controls 6.2
+import QtQuick.Controls 2.3
 
 Item {
     width: gridLayout.width
@@ -153,6 +154,14 @@ Item {
 
             }
         }
+
+//        Row {
+//            RoundButton {
+//                width: 40
+//                height: 40
+
+//            }
+//        }
 
     }
 }

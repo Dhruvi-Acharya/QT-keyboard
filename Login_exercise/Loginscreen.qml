@@ -23,7 +23,7 @@ Item {
 
         Image {
             Layout.alignment : Qt.AlignHCenter | Qt.AlignVCenter
-            //                source : "/images/wisenet_logo.png"
+            source : "/images/wisenet_logo.png"
         }
 
         Label {
@@ -61,8 +61,10 @@ Item {
                 // width: txt_ID.width
             }
             Button {
+                icon.color: "transparent"
                 Layout.preferredWidth: 50
-                icon.source: "https://static.vecteezy.com/system/resources/thumbnails/006/542/150/small/setting-icon-design-tools-cog-gear-line-style-for-graphic-design-logos-web-sites-social-media-ui-mobile-app-free-vector.jpg"
+//                icon.source: "https://static.vecteezy.com/system/resources/thumbnails/006/542/150/small/setting-icon-design-tools-cog-gear-line-style-for-graphic-design-logos-web-sites-social-media-ui-mobile-app-free-vector.jpg"
+                icon.source: "images/setting_icon.png"
             }
             Label {
                 color: "white"
@@ -91,6 +93,10 @@ Item {
                         console.log("id1: "+txt_ID.text)
                         console.log("pwd1: "+txt_password.text)
                         myStack.currentIndex = 1 // Move to page 2
+                    }
+                    else
+                    {
+                        label_user.text = "Invalid User name or password!!! Please Retry"
                     }
                 }
             }
@@ -136,6 +142,13 @@ Item {
                 }
 
             }
+        }
+        Label {
+            anchors.topMargin : 20
+            color : "white"
+            id : label_user
+            text : ""
+            Layout.alignment : Qt.AlignHCenter | Qt.AlignVCenter
         }
     }
 }

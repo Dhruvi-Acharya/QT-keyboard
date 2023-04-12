@@ -4,4 +4,8 @@
         <file>Loginscreen.qml</file>
         <file>Screen2.qml</file>
     </qresource>
+    <qresource prefix="/images">
+        <file>setting_icon.png</file>
+        <file>wisenet_logo.png</file>
+    </qresource>
 </RCC>
